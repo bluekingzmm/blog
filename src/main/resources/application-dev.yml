@@ -56,7 +56,7 @@ logging:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.wip.model
+  type-aliases-package: com.blog.model
 
 swagger:
   show: true

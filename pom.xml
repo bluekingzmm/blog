@@ -183,7 +183,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <!--打jar包启动类-->
                 <configuration>
-                    <mainClass>com.wip.MyBlogApplication</mainClass>
+                    <mainClass>com.blog.MyBlogApplication</mainClass>
                 </configuration>
             </plugin>
             <!--打jar包需要-->

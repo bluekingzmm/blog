@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wip.dao.CommentDao">
+<mapper namespace="com.blog.dao.CommentDao">
 
     <!--表名-->
     <sql id="BASE_TABLE">
@@ -13,7 +13,7 @@
     </sql>
 
     <!--添加评论-->
-    <insert id="addComment" parameterType="com.wip.model.CommentDomain">
+    <insert id="addComment" parameterType="com.blog.model.CommentDomain">
         INSERT INTO
           <include refid="BASE_TABLE"/>
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -37,7 +37,7 @@
         </trim>
     </insert>
     <!--根据文章ID获取评论-->
-    <select id="getCommentByCId" resultType="com.wip.model.CommentDomain">
+    <select id="getCommentByCId" resultType="com.blog.model.CommentDomain">
         SELECT
           <include refid="BASE_COLUMN"/>
         FROM
@@ -67,7 +67,7 @@
     </select>
 
     <!--根据条件查找评论列表-->
-    <select id="getCommentsByCond" resultType="com.wip.model.CommentDomain" parameterType="com.wip.dto.cond.CommentCond">
+    <select id="getCommentsByCond" resultType="com.blog.model.CommentDomain" parameterType="com.blog.dto.cond.CommentCond">
         SELECT
           <include refid="BASE_COLUMN"/>
         FROM
@@ -90,7 +90,7 @@
     </select>
 
     <!--通过ID获取评论-->
-    <select id="getCommentById" resultType="com.wip.model.CommentDomain">
+    <select id="getCommentById" resultType="com.blog.model.CommentDomain">
         SELECT
           <include refid="BASE_COLUMN"/>
         FROM
